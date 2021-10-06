@@ -7,10 +7,9 @@
         <option value="3">/</option>
     </select>
     <input type="number" name="b" id="b" [(ngModel)]="operandoB">
-    <button>Calcular</button>
+    <button (click)="calcular(operador)">Calcule pra mim</button>
     <p></p>
-    A interpolação mostra a funcionalidade do ngModel(two way data biding): 
     {{operandoA}}
-    {{operandoB}}
     {{operador}}
+    {{operandoB}}
 </main>

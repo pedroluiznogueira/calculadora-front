@@ -10,6 +10,7 @@ export class CalculadoraComponent implements OnInit {
     private a: number = 0;
     private b: number = 0;
     private o: number = 0; 
+    public r: number = 0;
 
   constructor() { }
 
@@ -38,6 +39,25 @@ export class CalculadoraComponent implements OnInit {
     
   public set operador($v: number) {
     this.o = $v;
+  }
+
+  public calcular(r: number): number {
+    switch(r) {
+      case (0):
+        this.r = this.operandoA + this.operandoB;
+        break;
+      case (1): 
+        this.r = this.operandoA - this.operandoB;
+        break;
+      case (2): 
+        this.r = this.operandoA * this.operandoB;
+        break;
+      case (3): 
+        this.r = this.operandoA / this.operandoB;
+        break;
+    } 
+    console.log(this.r);  
+    return this.r;
   }
 
 }
