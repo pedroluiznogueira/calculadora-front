@@ -42,7 +42,7 @@ export class CalculadoraComponent implements OnInit {
   }
 
   public calcular(): void {
-    
+    console.log("Realizando cálculos...");
   }
 
 }
