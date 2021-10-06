@@ -45,7 +45,10 @@ export class CalculadoraComponent implements OnInit {
 
   public calcular(): void {
     console.log("Realizando cálculos...");
-    this.servico.calcular(this.a, this.b, this.o);
+    // a função calcular no serviço retorna um observable, então precisamos dar subcribe nesse observable
+    this.servico.calcular(this.a, this.b, this.o).subscribe(
+      data => console.log(data)
+    );
   }
 
 }
