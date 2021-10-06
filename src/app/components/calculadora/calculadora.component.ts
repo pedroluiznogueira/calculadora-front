@@ -9,12 +9,35 @@ import { Component, OnInit } from '@angular/core';
 export class CalculadoraComponent implements OnInit {  
     private a: number = 0;
     private b: number = 0;
-    private operador: number = 0; 
+    private o: number = 0; 
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  
+  public get operandoA() : number {
+    return this.a;
+  }
+  
+  public set operandoA($a: number) {
+    this.a = $a;
+  }
 
+  public get operandoB() : number {
+    return this.b;
+  }
+    
+  public set operandoB($b: number) {
+    this.b = $b;
+  }
+
+  public get operador() : number {
+    return this.o;
+  }
+    
+  public set operador($v: number) {
+    this.o = $v;
+  }
 
 }
