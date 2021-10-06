@@ -13,7 +13,7 @@ export class CalculadoraService {
 
   // evidenciando o retorno da função
   public calcular(a:number, b:number, o:number): Observable<any> {
-      // fazendo requisição do tipo get para uma API
-      return this.http.get("https://pokeapi.co/api/v2/pokemon/ditto");
+      // post precisa de um parâmetro para ser executado
+      return this.http.post('http://localhost:8080/Calculadora/calcular', {});
   }
 }
