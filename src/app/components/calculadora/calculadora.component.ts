@@ -41,23 +41,8 @@ export class CalculadoraComponent implements OnInit {
     this.o = $v;
   }
 
-  public calcular(r: number): number {
-    switch(r) {
-      case (0):
-        this.r = this.operandoA + this.operandoB;
-        break;
-      case (1): 
-        this.r = this.operandoA - this.operandoB;
-        break;
-      case (2): 
-        this.r = this.operandoA * this.operandoB;
-        break;
-      case (3): 
-        this.r = this.operandoA / this.operandoB;
-        break;
-    } 
-    console.log(this.r);  
-    return this.r;
+  public calcular(): void {
+    
   }
 
 }
