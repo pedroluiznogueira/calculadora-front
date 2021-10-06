@@ -47,6 +47,8 @@ export class CalculadoraComponent implements OnInit {
     console.log("Realizando cálculos...");
     // a função calcular no serviço retorna um observable, então precisamos dar subcribe nesse observable
     this.servico.calcular(this.a, this.b, this.o).subscribe(
+      // um objeto observable é um observável, então com o subscribe estou adicionando um observador ao Observable, como um EventListener
+      // a resposta que o servidor dá é um JSON e passa ele para um objeto
       data => console.log(data)
     );
   }
